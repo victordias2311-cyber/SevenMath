@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SevenMath - Matemática para Vestibular</title>
+    <link rel="stylesheet" href="assets/estilo.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">SevenMath</div>
+            <div class="subtitle">Matemática para Vestibular</div>
+        </div>
+
+        <!-- HOME TAB -->
+        <div id="home" class="tab-content active">
+            <div class="welcome-card">
+                <div class="welcome-title">Bem-vindos ao SevenMath! 🎓</div>
+                <div class="welcome-text">
+                    Sua plataforma completa para dominar a matemática do vestibular. 
+                    Prepare-se com teoria sólida e pratique com exercícios elaborados especialmente para você!
+                </div>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">7</div>
+                    <div class="stat-label">Matérias</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">21</div>
+                    <div class="stat-label">Exercícios</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Gratuito</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Disponível</div>
+                </div>
+            </div>
+
+            <div class="subject-card">
+                <div class="subject-title">📐 Geometria Plana</div>
+                <div class="subject-description">
+                    Domine áreas, perímetros, teoremas e propriedades das figuras planas
+                </div>
+            </div>
+
+            <div class="subject-card">
+                <div class="subject-title">📊 Análise Gráfica</div>
+                <div class="subject-description">
+                    Interprete gráficos, funções e suas representações visuais
+                </div>
+            </div>
+
+            <div class="subject-card">
+                <div class="subject-title">🔢 Álgebra</div>
+                <div class="subject-description">
+                    Equações, inequações, sistemas e manipulação algébrica
+                </div>
+            </div>
+
+            <div class="subject-card">
+                <div class="subject-title">📈 Sequências e Séries</div>
+                <div class="subject-description">
+                    Progressões aritméticas, geométricas e séries infinitas
+                </div>
+            </div>
+        </div>
+
+        <!-- THEORY TAB -->
+        <div id="theory" class="tab-content">
+            <div class="subject-card" onclick="toggleTheory('geometria')">
+                <div class="subject-title">📐 Geometria Plana</div>
+                <div class="subject-description">Clique para ver a teoria</div>
+                <div id="geometria-theory" class="theory-content hidden">
+                    <h4>Geometria Plana - Tópicos ENEM:</h4>
+                    <p><strong>Áreas de Figuras Planas:</strong></p>
+                    <div class="math-formula">Triângulo: A = (b × h)/2 | Trapézio: A = (B + b) × h/2</div>
+                    <div class="math-formula">Círculo: A = π × r² | Setor: A = (α × π × r²)/360°</div>
+                    
+                    <p><strong>Teorema de Pitágoras e Relações Métricas:</strong></p>
+                    <div class="math-formula">a² + b² = c² | h² = m × n | a × c = b × h</div>
+                    
+                    <p><strong>Semelhança de Triângulos:</strong></p>
+                    <p>Razão entre lados correspondentes é constante. Aplicação em sombras, mapas e escalas.</p>
+                    
+                    <p><strong>Polígonos Regulares:</strong></p>
+                    <div class="math-formula">Ângulo interno = (n-2) × 180°/n</div>
+                    <div class="math-formula">Soma ângulos internos = (n-2) × 180°</div>
+                </div>
+            </div>
+
+            <div class="subject-card" onclick="toggleTheory('analise')">
+                <div class="subject-title">📊 Análise Gráfica</div>
+                <div class="subject-description">Clique para ver a teoria</div>
+                <div id="analise-theory" class="theory-content hidden">
+                    <h4>Análise Gráfica - Tópicos ENEM:</h4>
+                    <p><strong>Função Afim (1º grau):</strong></p>
+                    <div class="math-formula">f(x) = ax + b | a > 0 (crescente) | a < 0 (decrescente)</div>
+                    
+                    <p><strong>Função Quadrática (2º grau):</strong></p>
+                    <div class="math-formula">f(x) = ax² + bx + c | Vértice: (-b/2a, -Δ/4a)</div>
+                    <div class="math-formula">Discriminante: Δ = b² - 4ac</div>
+                    
+                    <p><strong>Função Exponencial:</strong></p>
+                    <div class="math-formula">f(x) = aˣ | Crescimento/decaimento exponencial</div>
+                    
+                    <p><strong>Interpretação de Gráficos:</strong></p>
+                    <p>• Análise de domínio e imagem<br>
+                    • Pontos de máximo e mínimo<br>
+                    • Intervalos de crescimento<br>
+                    • Interceptos com os eixos</p>
+                </div>
+            </div>
+
+            <div class="subject-card" onclick="toggleTheory('algebra')">
+                <div class="subject-title">🔢 Álgebra</div>
+                <div class="subject-description">Clique para ver a teoria</div>
+                <div id="algebra-theory" class="theory-content hidden">
+                    <h4>Álgebra - Tópicos ENEM:</h4>
+                    <p><strong>Equações do 2º Grau:</strong></p>
+                    <div class="math-formula">ax² + bx + c = 0 | x = (-b ± √Δ)/2a</div>
+                    <div class="math-formula">Soma das raízes: S = -b/a | Produto: P = c/a</div>
+                    
+                    <p><strong>Produtos Notáveis:</strong></p>
+                    <div class="math-formula">(a ± b)² = a² ± 2ab + b²</div>
+                    <div class="math-formula">(a + b)(a - b) = a² - b²</div>
+                    
+                    <p><strong>Fatoração:</strong></p>
+                    <p>• Fator comum: ax + bx = x(a + b)<br>
+                    • Diferença de quadrados: a² - b² = (a+b)(a-b)<br>
+                    • Trinômio quadrado perfeito</p>
+                    
+                    <p><strong>Sistemas Lineares:</strong></p>
+                    <p>Método da substituição, adição e comparação. Classificação: SPD, SPI, SI.</p>
+                </div>
+            </div>
+
+            <div class="subject-card" onclick="toggleTheory('sequencias')">
+                <div class="subject-title">📈 Sequências e Séries</div>
+                <div class="subject-description">Clique para ver a teoria</div>
+                <div id="sequencias-theory" class="theory-content hidden">
+                    <h4>Sequências e Séries - Tópicos ENEM:</h4>
+                    <p><strong>Progressão Aritmética (PA):</strong></p>
+                    <div class="math-formula">aₙ = a₁ + (n-1) × r | r = aₙ₊₁ - aₙ</div>
+                    <div class="math-formula">Sₙ = n(a₁ + aₙ)/2 = n[2a₁ + (n-1)r]/2</div>
+                    
+                    <p><strong>Progressão Geométrica (PG):</strong></p>
+                    <div class="math-formula">aₙ = a₁ × q^(n-1) | q = aₙ₊₁/aₙ</div>
+                    <div class="math-formula">Sₙ = a₁(qⁿ - 1)/(q - 1) se q ≠ 1</div>
+                    
+                    <p><strong>Soma da PG Infinita:</strong></p>
+                    <div class="math-formula">S∞ = a₁/(1 - q) se |q| < 1</div>
+                    
+                    <p><strong>Aplicações:</strong></p>
+                    <p>• Juros compostos e crescimento populacional<br>
+                    • Depreciação e decaimento radioativo<br>
+                    • Problemas de contagem</p>
+                </div>
+            </div>
+
+            <div class="subject-card" onclick="toggleTheory('probabilidade')">
+                <div class="subject-title">🎲 Teoria da Probabilidade</div>
+                <div class="subject-description">Clique para ver a teoria</div>
+                <div id="probabilidade-theory" class="theory-content hidden">
+                    <h4>Probabilidade - Tópicos ENEM:</h4>
+                    <p><strong>Probabilidade Básica:</strong></p>
+                    <div class="math-formula">P(A) = n(A)/n(Ω) | 0 ≤ P(A) ≤ 1</div>
+                    
+                    <p><strong>Eventos:</strong></p>
+                    <p>• União: P(A ∪ B) = P(A) + P(B) - P(A ∩ B)<br>
+                    • Complementar: P(A') = 1 - P(A)<br>
+                    • Mutuamente excludentes: P(A ∩ B) = 0</p>
+                    
+                    <p><strong>Probabilidade Condicional:</strong></p>
+                    <div class="math-formula">P(A|B) = P(A ∩ B)/P(B)</div>
+                    
+                    <p><strong>Independência:</strong></p>
+                    <div class="math-formula">P(A ∩ B) = P(A) × P(B)</div>
+                    
+                    <p><strong>Aplicações:</strong></p>
+                    <p>• Estatística médica e epidemiologia<br>
+                    • Controle de qualidade<br>
+                    • Jogos e apostas</p>
+                </div>
+            </div>
+
+            <div class="subject-card" onclick="toggleTheory('razao')">
+                <div class="subject-title">⚖️ Razão e Proporção</div>
+                <div class="subject-description">Clique para ver a teoria</div>
+                <div id="razao-theory" class="theory-content hidden">
+                    <h4>Razão e Proporção - Tópicos ENEM:</h4>
+                    <p><strong>Razão:</strong></p>
+                    <div class="math-formula">Razão = a/b | Lê-se: "a está para b"</div>
+                    
+                    <p><strong>Proporção:</strong></p>
+                    <div class="math-formula">a/b = c/d ⟹ a×d = b×c (propriedade fundamental)</div>
+                    
+                    <p><strong>Regra de Três Simples:</strong></p>
+                    <p>Grandezas diretamente proporcionais: ↑A ⟹ ↑B<br>
+                    Grandezas inversamente proporcionais: ↑A ⟹ ↓B</p>
+                    
+                    <p><strong>Regra de Três Composta:</strong></p>
+                    <p>Análise de múltiplas grandezas simultaneamente.</p>
+                    
+                    <p><strong>Aplicações:</strong></p>
+                    <p>• Escalas e mapas<br>
+                    • Velocidade, tempo e distância<br>
+                    • Densidade demográfica<br>
+                    • Concentrações e diluições</p>
+                </div>
+            </div>
+
+            <div class="subject-card" onclick="toggleTheory('combinatoria')">
+                <div class="subject-title">🔄 Análise Combinatória</div>
+                <div class="subject-description">Clique para ver a teoria</div>
+                <div id="combinatoria-theory" class="theory-content hidden">
+                    <h4>Análise Combinatória - Tópicos ENEM:</h4>
+                    <p><strong>Princípio Fundamental da Contagem:</strong></p>
+                    <p>Se uma tarefa pode ser executada de m maneiras e outra de n maneiras, então ambas podem ser executadas de m × n maneiras.</p>
+                    
+                    <p><strong>Fatorial:</strong></p>
+                    <div class="math-formula">n! = n × (n-1) × (n-2) × ... × 2 × 1</div>
+                    
+                    <p><strong>Permutação Simples:</strong></p>
+                    <div class="math-formula">Pₙ = n! (arranjos de n elementos)</div>
+                    
+                    <p><strong>Arranjo Simples:</strong></p>
+                    <div class="math-formula">A(n,p) = n!/(n-p)! (ordem importa)</div>
+                    
+                    <p><strong>Combinação Simples:</strong></p>
+                    <div class="math-formula">C(n,p) = n!/[p!(n-p)!] (ordem não importa)</div>
+                    
+                    <p><strong>Aplicações:</strong></p>
+                    <p>• Formação de comissões<br>
+                    • Senhas e códigos<br>
+                    • Anagramas<br>
+                    • Probabilidade em sorteios</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ACTIVITIES TAB -->
+        <div id="activities" class="tab-content">
+            <!-- GEOMETRIA PLANA -->
+            <div class="activity-card">
+                <div class="activity-title">📐 Geometria Plana - Exercício 1</div>
+                <div class="question">
+                    (ENEM) Um terreno retangular de 120m por 80m será dividido em lotes quadrados iguais, sem sobras. Qual é a maior área possível para cada lote?
+                </div>
+                <ul class="options">
+                    <li class="option" onclick="checkAnswer(this, false)">a) 100 m²</li>
+                    <li class="option" onclick="checkAnswer(this, false)">b) 225 m²</li>
+                    <li class="option" onclick="checkAnswer(this, true)">c) 400 m²</li>
+                    <li class="option" onclick="checkAnswer(this, false)">d) 625 m²</li>
+                </ul>
+            </div>
+
+            <div class="activity-card">
+                <div class="activity-title">📐 Geometria Plana - Exercício 2</div>
+                <div class="question">
+                    Uma pizza circular de 30 cm de diâmetro é dividida em 8 fatias iguais. Qual é a área de cada fatia? (Use π = 3,14)
+                </div>
+                <ul class="options">
+                    <li class="option" onclick="checkAnswer(this, false)">a) 70,65 cm²</li>
+                    <li class="option" onclick="checkAnswer(this, true)">b) 88,31 cm²</li>
+                    <li class="option" onclick="checkAnswer(this, false)">c) 94,2 cm²</li>
+                    <li class="option" onclick="checkAnswer(this, false)">d) 106,78 cm²</li>
+                </ul>
+            </div>
+
+            <div class="activity-card">
+                <div class="activity-title">📐 Geometria Plana - Exercício 3</div>
+                <div class="question">
+                    Em um triângulo retângulo, a hipotenusa mede 13 cm e um dos catetos mede 5 cm. Qual é a área desse triângulo?
+                </div>
+                <ul class="options">
+                    <li class="option" onclick="checkAnswer(this, true)">a) 30 cm²</li>
+                    <li class="option" onclick="checkAnswer(this, false)">b) 32,5 cm²</li>
+                    <li class="option" onclick="checkAnswer(this, false)">c) 35 cm²</li>
+                    <li class="option" onclick="checkAnswer(this, false)">d) 39 cm²</li>
+                </ul>
+            </div>
+
+            <!-- ANÁLISE GRÁFICA -->
+            <div class="activity-card">
+                <div class="activity-title">📊 Análise Gráfica - Exercício 1</div>
+                <div class="question">
+                    (ENEM) Uma função f(x) = -2x² + 8x - 6 representa a trajetória de um projétil. A altura máxima atingida é:
+                </div>
+                <ul class="options">
+                    <li class="option" onclick="checkAnswer(this, false)">a) 1 metro</li>
+                    <li class="option" onclick="checkAnswer(this, true)">b) 2 metros</li>
+                    <li class="option" onclick="checkAnswer(this, false)">c) 3 metros</li>
+                    <li class="option" onclick="checkAnswer(this, false)">d) 4 metros</li>
+                </ul>
+            </div>
+
+            <div class="activity-card">
+                <div class="activity-title">📊 Análise Gráfica - Exercício 2</div>
+                <div class="question">
+                    Uma função linear f(x) = ax + b passa pelos pontos (2, 5) e (4, 11). Qual é o valor de a + b?
+                </div>
+                <ul class="options">
+                    <li class="option" onclick="checkAnswer(this, false)">a) -2</li>
+                    <li class="option" onclick="checkAnswer(this, true)">b) 2</li>
+                    <li class="option" onclick="checkAnswer(this, false)">c) 4</li>
+                    <li class="option" onclick="checkAnswer(this, false)">d) 6</li>
+                </ul>
+            </div>
+
+            <div class="activity-card">
+                <div class="activity-title">📊 Análise Gráfica - Exercício 3</div>
+                <div class="question">
+                    O gráfico de f(x) = 2^x corta o eixo y no ponto:
+                </div>
+                <ul class="options">
+                    <li class="option" onclick="checkAnswer(this, false)">a) (0, 0)</li>
+                    <li class="option" onclick="checkAnswer(this, true)">b) (0, 1)</li>
+                    <li class="option" onclick="checkAnswer(this, false)">c) (0, 2)</li>
+                    <li class="option" onclick="checkAnswer(this, false)">d) (1, 0)</li>
+                </ul>
+            </div>
+
+            <!-- ÁLGEBRA -->
+            <div class="activity-card">
+                <div class="activity-title">🔢 Álgebra - Exercício 1</div>
+                <div class="question">
+                    (ENEM) A equação x² - 6x + 8 = 0 tem raízes que, somadas, resultam em:
+                </div>
+                <ul class="options">
+                    <li class="option" onclick="checkAnswer(this, false)">a) 2</li>
+                    <li class="option" onclick="checkAnswer(this, false)">c) 4</li>
+                    <li class="option" onclick="checkAnswer(this, true)">b) 6</li>
+                    <li class="option" onclick="checkAnswer(this, false)">d) 8</li>
+                </ul>
+            </div>
+
+            <div class="activity-card">
+                <div class="activity-title">🔢 Álgebra - Exercício 2</div>
+                <div class="question">
+                    Simplificando a expressão (x + 3)² - (x - 1)², obtemos:
+                </div>
+                <ul class="options">
+                    <li class="option" onclick="checkAnswer(this, false)">a) 8x + 8</li>
+                    <li class="option" onclick="checkAnswer(this, true)">b) 8x + 10</li>
+                    <li class="option" onclick="checkAnswer(this, false)">c) 6x + 10</li>
+                    <li class="option" onclick="checkAnswer(this, false)">d) 6x + 8</li>
+                </ul>
+            </div>
+
+            <div class="activity-card">
+                <div class="activity-title">🔢 Álgebra - Exercício 3</div>
+                <div class="question">
+                    O sistema {x + y = 7; 2x - y = 5} tem como solução:
+                </div>
+                <ul class="options">
+                    <li class="option" onclick="checkAnswer(this, true)">a) x = 4, y = 3</li>
+                    <li class="option" onclick="checkAnswer(this, false)">b) x = 3, y = 4</li>
+                    <li class="option" onclick="checkAnswer(this, false)">c) x = 5, y = 2</li>
+                    <li class="option" onclick="checkAnswer(this, false)">d) x = 2, y = 5</li>
+                </ul>
+            </div>
+
+            <!-- SEQUÊNCIAS -->
+            <div class="activity-card">
+                <div class="activity-title">📈 Sequências - Exercício 1</div>
+                <div class="question">
+                    (ENEM) Em uma PA com primeiro termo 3 e razão 4, a soma dos 10 primeiros termos é:
+                </div>
+                <ul class="options">
+                    <li class="option" onclick="checkAnswer(this, false)">a) 180</li>
+                    <li class="option" onclick="checkAnswer(this, true)">b) 210</li>
+                    <li class="option" onclick="checkAnswer(this, false)">c) 240</li>
+                    <li class="option" onclick="checkAnswer(this, false)">d) 270</li>
+                </ul>
+            </div>
+
+            <div class="activity-card">
+                <div class="activity-title">📈 Sequências - Exercício 2</div>
+                <div class="question">
+                    Uma PG tem primeiro termo 2 e razão 3. O quinto termo dessa progressão é:
+                </div>
+                <ul class="options">
+                    <li class="option" onclick="checkAnswer(this, false)">a) 54</li>
+                    <li class="option" onclick="checkAnswer(this, false)">b) 81</li>
+                    <li class="option" onclick="checkAnswer(this, true)">c) 162</li>
+                    <li class="option" onclick="checkAnswer(this, false)">d) 243</li>
+                </ul>
+            </div>
+
+            <div class="activity-card">
+                <div class="activity-title">📈 Sequências - Exercício 3</div>
+                <div class="question">
+                    A soma infinita da PG (1, 1/2, 1/4, 1/8, ...) é:
+                </div>
+                <ul class="options">
+                    <li class="option" onclick="checkAnswer(this, false)">a) 1</li>
+                    <li class="option" onclick="checkAnswer(this, false)">b) 1,5</li>
+                    <li class="option" onclick="checkAnswer(this, true)">c) 2</li>
+                    <li class="option" onclick="checkAnswer(this, false)">d) 2,5</li>
+                </ul>
+            </div>
+
+            <!-- PROBABILIDADE -->
+            <div class="activity-card">
+                <div class="activity-title">🎲 Probabilidade - Exercício 1</div>
+                <div class="question">
+                    (ENEM) Em uma urna há 5 bolas vermelhas e 3 azuis. A probabilidade de retirar uma bola azul é:
+                </div>
+                <ul class="options">
+                    <li class="option" onclick="checkAnswer(this, false)">a) 3/5</li>
+                    <li class="option" onclick="checkAnswer(this, true)">b) 3/8</li>
+                    <li class="option" onclick="checkAnswer(this, false)">c) 5/8</li>
+                    <li class="option" onclick="checkAnswer(this, false)">d) 1/3</li>
+                </ul>
+            </div>
+
+            <div class="activity-card">
+                <div class="activity-title">🎲 Probabilidade - Exercício 2</div>
+                <div class="question">
+                    Lançando dois dados, qual a probabilidade de a soma ser 7?
+                </div>
+                <ul class="options">
+                    <li class="option" onclick="checkAnswer(this, false)">a) 1/12</li>
+                    <li class="option" onclick="checkAnswer(this, false)">b) 1/9</li>
+                    <li class="option" onclick="checkAnswer(this, true)">c) 1/6</li>
+                    <li class="option" onclick="checkAnswer(this, false)">d) 1/4</li>
+                </ul>
+            </div>
+
+            <div class="activity-card">
+                <div class="activity-title">🎲 Probabilidade - Exercício 3</div>
+                <div class="question">
+                    A probabilidade de chover é 70% e de fazer sol é 30%. Qual a probabilidade de NÃO chover?
+                </div>
+                <ul class="options">
+                    <li class="option" onclick="checkAnswer(this, true)">a) 30%</li>
+                    <li class="option" onclick="checkAnswer(this, false)">b) 40%</li>
+                    <li class="option" onclick="checkAnswer(this, false)">c) 50%</li>
+                    <li class="option" onclick="checkAnswer(this, false)">d) 70%</li>
+                </ul>
+            </div>
+
+            <!-- RAZÃO E PROPORÇÃO -->
+            <div class="activity-card">
+                <div class="activity-title">⚖️ Razão e Proporção - Exercício 1</div>
+                <div class="question">
+                    (ENEM) Se 4 máquinas produzem 400 peças em 2 horas, quantas peças 6 máquinas produzirão em 3 horas?
+                </div>
+                <ul class="options">
+                    <li class="option" onclick="checkAnswer(this, false)">a) 600</li>
+                    <li class="option" onclick="checkAnswer(this, false)">b) 800</li>
+                    <li class="option" onclick="checkAnswer(this, true)">c) 900</li>
+                    <li class="option" onclick="checkAnswer(this, false)">d) 1200</li>
+                </ul>
+            </div>
+
+            <div class="activity-card">
+                <div class="activity-title">⚖️ Razão e Proporção - Exercício 2</div>
+                <div class="question">
+                    Em um mapa, 2 cm representam 50 km. Quantos quilômetros representa uma distância de 7 cm no mapa?
+                </div>
+                <ul class="options">
+                    <li class="option" onclick="checkAnswer(this, false)">a) 140 km</li>
+                    <li class="option" onclick="checkAnswer(this, true)">b) 175 km</li>
+                    <li class="option" onclick="checkAnswer(this, false)">c) 200 km</li>
+                    <li class="option" onclick="checkAnswer(this, false)">d) 250 km</li>
+                </ul>
+            </div>
+
+            <div class="activity-card">
+                <div class="activity-title">⚖️ Razão e Proporção - Exercício 3</div>
+                <div class="question">
+                    A velocidade é inversamente proporcional ao tempo. Se a 60 km/h levo 4 horas, a 80 km/h levarei:
+                </div>
+                <ul class="options">
+                    <li class="option" onclick="checkAnswer(this, false)">a) 2,5 horas</li>
+                    <li class="option" onclick="checkAnswer(this, true)">b) 3 horas</li>
+                    <li class="option" onclick="checkAnswer(this, false)">c) 3,5 horas</li>
+                    <li class="option" onclick="checkAnswer(this, false)">d) 5 horas</li>
+                </ul>
+            </div>
+
+            <!-- COMBINATÓRIA -->
+            <div class="activity-card">
+                <div class="activity-title">🔄 Combinatória - Exercício 1</div>
+                <div class="question">
+                    (ENEM) De quantas maneiras diferentes 5 pessoas podem se sentar em uma fileira de 5 cadeiras?
+                </div>
+                <ul class="options">
+                    <li class="option" onclick="checkAnswer(this, false)">a) 25</li>
+                    <li class="option" onclick="checkAnswer(this, false)">b) 60</li>
+                    <li class="option" onclick="checkAnswer(this, true)">c) 120</li>
+                    <li class="option" onclick="checkAnswer(this, false)">d) 150</li>
+                </ul>
+            </div>
+
+            <div class="activity-card">
+                <div class="activity-title">🔄 Combinatória - Exercício 2</div>
+                <div class="question">
+                    Uma comissão de 3 pessoas será formada a partir de um grupo de 8 pessoas. Quantas comissões diferentes podem ser formadas?
+                </div>
+                <ul class="options">
+                    <li class="option" onclick="checkAnswer(this, false)">a) 24</li>
+                    <li class="option" onclick="checkAnswer(this, false)">b) 48</li>
+                    <li class="option" onclick="checkAnswer(this, true)">c) 56</li>
+                    <li class="option" onclick="checkAnswer(this, false)">d) 336</li>
+                </ul>
+            </div>
+
+            <div class="activity-card">
+                <div class="activity-title">🔄 Combinatória - Exercício 3</div>
+                <div class="question">
+                    Quantos anagramas podem ser formados com as letras da palavra PROVA?
+                </div>
+                <ul class="options">
+                    <li class="option" onclick="checkAnswer(this, false)">a) 60</li>
+                    <li class="option" onclick="checkAnswer(this, true)">b) 120</li>
+                    <li class="option" onclick="checkAnswer(this, false)">c) 180</li>
+                    <li class="option" onclick="checkAnswer(this, false)">d) 240</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- NAVEGAÇÃO INFERIOR FIXA -->
+        <div class="nav-tabs">
+            <button class="nav-tab active" data-tab="home" onclick="switchTab('home')">Home</button>
+            <button class="nav-tab" data-tab="theory" onclick="switchTab('theory')">Teoria</button>
+            <button class="nav-tab" data-tab="activities" onclick="switchTab('activities')">Atividades</button>
+        </div>
+    </div>
+
+    <script src="assets/Script.js"></script>
+</body>
+</html>
